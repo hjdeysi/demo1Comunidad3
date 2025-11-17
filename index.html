@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Site</title>
+    <link rel="stylesheet" href="estilos/styles.css" />
+  </head>
+  <body>
+    <!--LOGO Y MENUS-->
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img height="100" width="50" src="imagenes/logo.svg" alt="" />
+      </a>
+
+      <ul class="Menu-Horizontal">
+        <li><a href="">Nosotros</a></li>
+        <li>
+          <a href="">Categorias</a>
+          <ul class="Menu-Vertical">
+            <li><a href="">Ropa de mujer</a></li>
+            <li><a href="">Ropa de hombre</a></li>
+            <li><a href="">Niños</a></li>
+            <li><a href="">Calzado y Accesorios</a></li>
+          </ul>
+        </li>
+        <li><a href="index2.html">Mis Reclamos</a></li>
+        <li><a href="#contactanos">Contáctanos</a></li>
+      </ul>
+    </nav>
+    <!--SECCION CREDITOS-->
+    <section class="seccion-creditos">
+      <div class="cont-gral-creditos">
+        <div class="cont-cred-texto">
+          <h2>¿Quienes Somos?</h2>
+          <p>
+            Eco-Fashion nace como una propuesta innovadora que busca transformar 
+            la manera en que las personas consumen moda, impulsando la sostenibilidad
+            y la economía circular. Nuestro objetivo es ofrecer una alternativa digital
+            que permita comprar y vender prendas de segunda mano, reduciendo el impacto
+            ambiental del fast fashion y prolongando la vida útil de la ropa. A través
+            de un enfoque centrado en el usuario y apoyado en la tecnología, promovemos
+            hábitos de consumo más conscientes, accesibles y responsables.
+
+          </p>
+          <p>
+            Detrás del proyecto, un equipo multidisciplinario de jóvenes emprendedores
+            combina creatividad, visión social y compromiso ambiental para ofrecer
+            soluciones prácticas a los desafíos actuales del sector textil. 
+            Creemos que la innovación puede ser una herramienta poderosa para generar
+            cambio, por eso unimos diseño, tecnología y sostenibilidad para crear 
+            experiencias que conecten con los valores de una nueva generación comprometida
+            con el planeta
+          </p>
+        </div>
+
+        <div class="cont-cred-img">
+          <img src="imagenes/polo.svg" />
+        </div>
+      </div>
+    </section>
+
+    <!--SECCION INDUSTRIA-->
+    <section class="seccion-seguros">
+      <div class="cont-gral-seguros">
+        <div class="cont-seg-texto">
+          <h2>La industria de la moda enfrenta un problema urgente</h2>
+          <p>
+            Cada segundo un camión lleno de ropa termina quemado o en un vertedero, 
+            y menos del 1% vuelve a convertirse en nuevas prendas. Miles de toneladas
+            quedan almacenadas u olvidadas en los armarios, generando pérdidas
+            económicas enormes y un impacto ambiental que ya no puede ignorarse.
+            Vestir bien no debería significar contaminar, y el consumo de moda debe
+            adaptarse a una sociedad que exige responsabilidad y transparencia.
+          </p>
+          <p>
+            Para construir un futuro distinto, es necesario transformar la manera en que
+            diseñamos y reutilizamos la ropa, impulsando modelos como la reparación,
+            el intercambio, la reventa y la compra de segunda mano. También se requieren
+            materiales más seguros y renovables que no dañen los ecosistemas, junto con
+            soluciones que permitan que las prendas usadas se conviertan nuevamente en
+            productos útiles. Ninguna organización puede cambiar esto sola, pero iniciativas
+            colaborativas y plataformas como Eco-Fashion demuestran que es posible avanzar
+            hacia una industria más circular, donde la moda se disfrute sin desperdicio y
+            con un impacto positivo en el planeta.
+          </p>
+          <buttom>Leer más...</buttom>
+        </div>
+
+        <div class="cont-seg-video">
+          <iframe width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/3iKHr-JnWYA?si=xa5F4YV2gZzACps4" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!--SECCION FORMULARIO-->
+    <section class="seccion-formulario" id="contactanos">
+      <div class="cont-gral-formulario">
+        <h2>Formulario de Atención al Cliente</h2>
+        <p>Complete todos los datos</p>
+
+        <form class="formulario">
+          <div class="campo">
+            <label form="nombre">ID de pedido:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese el ID de pedido"
+            />
+          </div>
+          <!--lista despegale-->
+          <div class="campo">
+            <label for="Tipo de Incidencia">Tipo de Incidencia:</label>
+
+            <select id="Tipo de Incidencia" name="Tipo de Incidencia">
+              <option value="">Seleccione un tipo de incidencia</option>
+              <option value="Reclamo">Reclamo</option>
+              <option value="Reclamo">Devolución</option>
+              <option value="Reclamo">Consulta</option>
+            </select>
+          </div>
+          <!--checkbox-->
+          <div class="campo">
+            <label>Medio de contacto:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label
+                  ><input type="checkbox" name"Medio de contacto"
+                  value="Whatsapp">Whatsapp</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name"Medio de contacto"
+                  value="Correo electrónico">Correo electrónico</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name"Medio de contacto"
+                  value="Llamada telefónica">Llamada telefónica</label
+                >
+              </li>
+            </ul>
+          </div>
+          <!--radio button-->
+
+          <form class="formulario">
+          <div class="campo">
+            <label form="nombre">Descripción de la incidencia:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Escribe detalladamente tu incidencia"
+            />
+          </div>
+          <!--radio button-->
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <!--PIE DE PAGINA-->
+    <section class="seccion-footer">
+      <div class="cont-gral-footer">
+        <div class="footer-info">
+          <h3>Acerca de nosotros</h3>
+          <p>
+            Eco-Fashion es una plataforma que impulsa la compra y
+            venta de prendas de segunda mano para promover un consumo
+            más responsable y reducir el impacto ambiental de la moda.
+            Nuestro propósito es hacer que vestir bien y cuidar el planeta
+            vayan siempre de la mano.
+          </p>
+          <p>&copy: 2025 Todos los derechos reservados</p>
+        </div>
+        <div class="footer-redes">
+          <h3>Nuestras redes</h3>
+          <ul class="lista-redes">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagran</a></li>
+            <li><a href="">TikTok</a></li>
+          </ul>
+        </div>
+        <!--POLITICAS Y PROTECCION DATOS-->
+        <div class="footer-politica">
+          <h3>Proteccion de Datos</h3>
+          <ul class="lista-proteccion">
+            <li><a href="">Ley Proteccion Datos</a></li>
+            <li><a href="">Politicas</a></li>
+            <li><a href="">Normas</a></li>
+            <li><a href="">Reglamentos</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

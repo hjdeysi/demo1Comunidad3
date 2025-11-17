@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eco-Fashion Service Desk (EFSD)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/style2.css" />
+  <link rel="icon" href="./logo.jpg">
+    <script defer src="./APP.JS" ></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="./logo.jpg" alt="Logo EcoFashion" class="logo">
+      <div class="brand-stack">
+        <span class="brand-name">EcoFashion</span>
+        <small class="brand-sub">Service Desk · EFSD</small>
+      </div>
+    </div>
+
+    <div class="auth">
+      <form id="loginForm" class="login-form" autocomplete="off" aria-label="Acceso">
+        <input id="nameInput" name="name" type="text" placeholder="Ingresa tu nombre" minlength="2" required aria-label="Nombre">
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+      <div id="userBadge" class="user-badge" hidden>
+        <span class="hi">Hola, <strong id="userName"></strong></span>
+        <button id="logoutBtn" class="linklike" title="Cerrar sesión">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="title">Portal único de atención a usuarios</h1>
+        <p class="subtitle">
+          Registra reclamos, devoluciones o consultas de Eco‑Fashion. Recibe un ticket EF‑2025‑XXXX y sigue el estado: <b>Pendiente</b>, <b>En proceso</b>, <b>Resuelto</b> o <b>Rechazado</b>.
+        </p>
+        <div class="cta-group">
+          <a href="#form" class="btn btn-primary">Crear ticket</a>
+          <a href="#tickets" class="btn btn-outline">Mis tickets</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" class="desk">
+      <h2 class="section-title">Registrar reclamo / devolución / consulta</h2>
+      <form id="ticketForm" novalidate>
+        <div class="form-grid">
+          <label class="field">
+            <span>Tipo de incidencia <em>*</em></span>
+            <select id="tipo" required>
+              <option value="">Selecciona…</option>
+              <option>Reclamo</option>
+              <option>Devolución</option>
+              <option>Consulta</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>ID de pedido</span>
+            <input id="pedido" type="text" placeholder="EF-ORD-123456" pattern="^[A-Za-z0-9_-]{4,}$">
+          </label>
+
+          <label class="field field-col-2">
+            <span>Descripción <em>*</em></span>
+            <textarea id="desc" rows="4" placeholder="Describe el hecho, fechas, producto, monto, y evidencia…" required></textarea>
+          </label>
+
+          <label class="field">
+            <span>Adjuntar archivo (JPG/PNG/PDF, máx. 10 MB)</span>
+            <input id="adj" type="file" accept=".jpg,.jpeg,.png,.pdf">
+          </label>
+
+          <label class="field">
+            <span>Correo de contacto <em>*</em></span>
+            <input id="correo" type="email" placeholder="tu@correo.com" required>
+          </label>
+
+          <div class="field field-col-2">
+            <button type="submit" class="btn btn-primary">Generar ticket</button>
+            <small class="help">Al enviar, aceptas el tratamiento de datos para gestionar tu caso. Recibirás una notificación de confirmación.</small>
+          </div>
+        </div>
+      </form>
+
+      <div id="alert" class="alert" hidden></div>
+    </section>
+
+    <section id="tickets" class="tickets">
+      <div class="tickets-head">
+        <h2 class="section-title">Mis tickets</h2>
+        <div class="tools">
+          <select id="filterEstado">
+            <option value="">Todos</option>
+            <option>Pendiente</option>
+            <option>En proceso</option>
+            <option>Resuelto</option>
+            <option>Rechazado</option>
+          </select>
+          <input id="searchBox" type="search" placeholder="Buscar por ID o pedido…">
+        </div>
+      </div>
+
+      <div id="emptyTickets" class="empty">Aún no registras tickets. Crea el primero arriba 👆</div>
+
+      <div class="table-wrap">
+        <table class="table" id="ticketsTable" aria-label="Listado de tickets">
+          <thead>
+            <tr>
+              <th>ID Ticket</th>
+              <th>Tipo</th>
+              <th>Pedido</th>
+              <th>Estado</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="note">Tips: Puedes actualizar el estado a modo demostración. En producción, lo gestiona el equipo EFSD.</p>
+    </section>
+
+    <section id="catalogo" class="gallery">
+      <h2 class="section-title">EcoFashion · destacados</h2>
+      <div class="grid">
+        <figure class="card">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_842688-MPE82247025558_022025-O-cartera-zafira-renzo-costa.webp" alt="Cartera Zafira Renzo Costa" loading="lazy">
+          <figcaption><h4>Cartera Zafira</h4><p>Renzo Costa · Excelente estado</p></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_718417-MPE82126509239_012025-O-7k-renzo-costa-casaca-cuero-natural-vintage-talla-l.webp" alt="Casaca de cuero Renzo Costa Vintage" loading="lazy">
+          <figcaption><h4>Casaca cuero Vintage</h4><p>Renzo Costa · Talla L</p></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://media.falabella.com/falabellaPE/883358711_1/w=800,h=800,fit=pad" alt="Zapatillas Nike Court Legacy Lift" loading="lazy">
+          <figcaption><h4>Zapatillas Court Legacy</h4><p>Como nuevas · 1 uso</p></figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://storeinpe.com/cdn/shop/files/Disenosintitulo-2023-12-07T011230.339_2048x.png?v=1741461253" alt="Camiseta oversize minimal" loading="lazy">
+          <figcaption><h4>Polera oversize</h4><p>Algodón · Suave y fresca</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> EcoFashion · EFSD</p>
+    <nav class="footer-nav">
+      <a href="#form">Crear ticket</a>
+      <a href="#tickets">Mis tickets</a>
+      <a href="#docs">Documentación</a>
+    </nav>
+  </footer>
+
+
+</body>
+</html>
